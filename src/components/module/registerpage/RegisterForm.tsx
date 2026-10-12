@@ -6,6 +6,7 @@ import logo from "../../../app/assets/logo-icon.png";
 import Link from "next/link";
 import { FaFacebookF, FaGoogle } from "react-icons/fa6";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { registration } from "./registration";
 
 const InputClass =
   "h-11 block rounded-full text-[12px] px-4 outline-0 border-2 w-full mt-2 mb-3";
@@ -25,15 +26,16 @@ const RegisterForm = () => {
       ...form,
     };
     const { name, value } = e.target;
-
     formData[name as keyof typeof form] = value;
-
     setForm(formData);
   };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    console.log("Sign up:", form);
+
+    const res=registration(form);
+    console.log(res)
+
     // TODO: call your sign-up API here
   };
 

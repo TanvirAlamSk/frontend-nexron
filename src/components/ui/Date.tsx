@@ -1,11 +1,10 @@
 "use client";
 
 const Date = () => {
-  return (
-    <>
-      © {new globalThis.Date().getFullYear()} 
-    </>
-  );
+  // const date=new Date()
+  return <>
+  {/* © {new .Date().getFullYear()}  */}
+  </>;
 };
 
 export default Date;
